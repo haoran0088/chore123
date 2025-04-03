@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const { exec, execSync } = require('child_process');
 const port = process.env.SERVER_PORT || process.env.PORT || 5000;        
-const UUID = process.env.UUID || '1a62a0d0-718a-4a9f-b1a8-7844118d3f7f'; //若需要改UUID，需要在config.json里改为一致
+const UUID = process.env.UUID || 'ddb3fd5d-5fdb-40e6-9854-ce15b8dbab62'; //若需要改UUID，需要在config.json里改为一致
 const NEZHA_SERVER = process.env.NEZHA_SERVER || '';     
 const NEZHA_PORT = process.env.NEZHA_PORT || '';                     // 哪吒端口为{443,8443,2096,2087,2083,2053}其中之一开启tls
 const NEZHA_KEY = process.env.NEZHA_KEY || '';
-const ARGO_DOMAIN = process.env.ARGO_DOMAIN || '1111.ddsaoi.ip-ddns.com';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
-const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiZDUxNjU3MGQ1YmMxMGI2NTkzMGFkZjQ0NDdmY2NlNmYiLCJ0IjoiYWNiYmUwNzgtZGU5NS00NmJkLTllYjUtNTljYTg5YjRlMGIwIiwicyI6IlpHTTJNamRsTmpBdFlUQTJZeTAwTlRSaUxUZ3dZell0TnpGbVpUQXhNemsyWW1OaCJ9';
+const ARGO_DOMAIN = process.env.ARGO_DOMAIN || '6.grendeyum1.dpdns.org';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至files目录
+const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiMTFmMTQ1MzU5ZGI5MGY5MGExYTliNjEzYTUxZjAxMGMiLCJ0IjoiNjliMzkxYjItMDA3NS00MWIwLWE0YTUtZWRmZTZmOGI5MGI4IiwicyI6IlpXWXhOakkxWm1ZdFpEZzRNQzAwTVRGbUxXRTRNVFV0WmpZMU1qa3dNRE5rTlRFNSJ9';
 const CFIP = process.env.CFIP || 'na.ma';
 const NAME = process.env.NAME || 'Choreo';
 
